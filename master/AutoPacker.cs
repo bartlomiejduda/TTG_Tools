@@ -1190,29 +1190,7 @@ namespace TTG_Tools
                                 message = "File " + fi[i].Name + " exported in pvr file. " + result;
                                 path = TTG_Tools.MainMenu.settings.pathForOutputFolder + "\\" + Methods.GetNameOfFileOnly(fi[i].Name, ".d3dtx") + ".pvr";
                             }
-
-                            byte[] rawData = null;
-                            DDS.DDS2Raw.Parse(BinContent, TTG_Tools.MainMenu.settings.pathForOutputFolder + "\\" + Methods.GetNameOfFileOnly(fi[i].Name, ".d3dtx") + ".png", ref rawData);
-                            byte[] temp = new byte[4];
-                            int width = -1, height = -1;
-
-                            Array.Copy(BinContent, 12, temp, 0, temp.Length);
-                            width = BitConverter.ToInt32(temp, 0);
-                            temp = new byte[4];
-                            Array.Copy(BinContent, 16, temp, 0, temp.Length);
-                            height = BitConverter.ToInt32(temp, 0);
-
-
-                            if (rawData != null && rawData.Length != 0)
-                            {
-                                //System.Drawing.Bitmap test = DDS.DDS2Raw.CreateBitmap(width, height, rawData, false);
-                                //pictureBox1.Image = test;
-                                System.Drawing.Image test2 = DDS.DDS2Raw.CreateBitmap(width, height, rawData, false);
-                                test2 = DDS.DDS2Raw.resizeImage(test2, new Size(128, 128));
-                                //System.Drawing.Image test2 = DDS.DDS2Raw.resizeImage(test, new Size(128, 128));
-                                pictureBox1.Image = test2;
-                            }
-
+                            
                             fs = new FileStream(path, FileMode.OpenOrCreate);
                             fs.Write(BinContent, 0, BinContent.Length);
                             fs.Close();
