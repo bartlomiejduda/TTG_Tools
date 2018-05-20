@@ -120,6 +120,7 @@
   <data name="richTextBox1.Text" xml:space="preserve">
     <value>TTG Tools 
 by Den Em (Е.Д.В.)
+moded by pashok6798 (from Den Em's agreement)
 (e-mail: d3n123@rambler.ru)
 
 Игры с полной поддержкой в примерном порядке появления их поддержки:
@@ -128,6 +129,10 @@ Tales of Monkey Island, Sam and Max: Season Two, Wallace and Gromit's Grand Adve
 
 ===
 [Version history]
+v.1.0.0 (20.05.18)
++Auto(De)packer
+Added support landb files for The Guardians of the Galaxy
+
 v.0.9.9b (12.06.16 - 06.06.16 "Костыльная версия". К версии 1.0.0 всё должно работать нормально)
 + TTG Tools
 Подправлена поддержка импорта и экспорта PVR текстур.
