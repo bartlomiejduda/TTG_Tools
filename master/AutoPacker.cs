@@ -513,6 +513,12 @@ namespace TTG_Tools
                     Array.Copy(binContent, poz, database[0].head, 0, 0);
                     poz = 0;
                 }
+                if(version == 4) //Temporary fix for some old langdb files
+                {
+                    database[0].head = new byte[76];
+                    Array.Copy(binContent, poz, database[0].head, 0, 76);
+                    poz = 76;
+                }
                 while (poz < binContent.Length)
                 {
                     //8 байт неизвестного происхождения
@@ -523,7 +529,7 @@ namespace TTG_Tools
                     poz += 8;
                     //4 байта длинны имени
                     //в первых двух (0 и 1) версиях пропускаем дублирование длинны! 
-                    if (version <= 1)
+                    if (version <= 1 || version == 4)
                     {
                         poz += 4;
                     }
@@ -535,7 +541,7 @@ namespace TTG_Tools
                         database[number].name = ConvertHexToString(binContent, poz, len_name);
                         poz += len_name;
                         //получаем 4 байта длины текста не забывая о 0 и 1 версии
-                        if (version <= 1)
+                        if (version <= 1 || version == 4)
                         {
                             poz += 4;
                         }
@@ -547,7 +553,7 @@ namespace TTG_Tools
                         database[number].text = ConvertHexToString(binContent, poz, len_text);
                         poz += len_text;
                         //получаем 4 байта длины анимации не забывая о 0 и 1 версии
-                        if (version <= 1)
+                        if (version <= 1 || version == 4)
                         {
                             poz += 4;
                         }
@@ -559,7 +565,7 @@ namespace TTG_Tools
                         database[number].animation = ConvertHexToString(binContent, poz, len_animation);
                         poz += len_animation;
                         //получаем 4 байта длины озвучки не забывая о 0 и 1 версии
-                        if (version <= 1)
+                        if (version <= 1 || version == 4)
                         {
                             poz += 4;
                         }
@@ -621,7 +627,7 @@ namespace TTG_Tools
         public static void SaveStringInfo(FileStream MyFileStream, string data, byte version)
         {
             byte[] b = BitConverter.GetBytes(data.Length);
-            if (version <= 1)
+            if (version <= 1 || version == 4) //FIX THAT LATER
             {
                 MyFileStream.Write(BitConverter.GetBytes(data.Length + 8), 0, 4);
             }
