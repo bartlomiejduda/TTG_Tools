@@ -49,10 +49,8 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tsvFilesRB = new System.Windows.Forms.RadioButton();
             this.txtFilesRB = new System.Windows.Forms.RadioButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -97,7 +95,7 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.ScrollAlwaysVisible = true;
             this.listBox1.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBox1.Size = new System.Drawing.Size(1254, 388);
+            this.listBox1.Size = new System.Drawing.Size(1071, 388);
             this.listBox1.TabIndex = 2;
             // 
             // buttonDecrypt
@@ -257,20 +255,11 @@
             this.txtFilesRB.Text = "txt format";
             this.txtFilesRB.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(1106, 21);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(161, 121);
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
-            // 
             // AutoPacker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1288, 559);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(1098, 559);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.checkCustomKey);
@@ -291,7 +280,6 @@
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -318,7 +306,6 @@
         private System.Windows.Forms.RadioButton tsvFilesRB;
         private System.Windows.Forms.RadioButton txtFilesRB;
         private System.Windows.Forms.CheckBox checkIOS;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
