@@ -1301,6 +1301,14 @@ namespace TTG_Tools
             }
             catch
             {
+                version = 4; //FIX THAT LATER
+            }
+            try
+            {
+                AutoPacker.ReadLangdb(binContent, database, version);
+            }
+            catch
+            {
                 try
                 {
                     string info = Methods.FindingDecrytKey(binContent, "text"); //Пытаемся расшифровать текстовый файл.
@@ -1497,6 +1505,14 @@ namespace TTG_Tools
                 catch
                 {
                     version = 2;
+                }
+                try
+                {
+                    AutoPacker.ReadLangdb(binContent, database, version);
+                }
+                catch
+                {
+                    version = 4; //FIX THAT LATER
                 }
                 try
                 {
