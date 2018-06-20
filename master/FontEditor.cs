@@ -184,6 +184,15 @@ namespace TTG_Tools
                        };
             version_of_font.Add(new Version_of_font(i, "Wolf Among Us"));//6
 
+            byte[] i2 =
+            {
+                           0x6B, 0x8C, 0x53, 0xFB, 0x2C, 0x29, 0xC2, 0x04,
+                           0x23, 0xFA, 0x4B, 0xAB, 0x15, 0xA7, 0x5E, 0x33, 0x95, 0x38, 0x98, 0x86, 0xAA, 0xB3, 0xA0, 0x53,
+                           0xEC, 0xF4, 0x33, 0x77, 0xE2, 0xCC, 0x38, 0x6F, 0x7E, 0x9E, 0x24, 0x3E, 0xD9, 0xC9, 0x14, 0xAA,
+                           0xE3, 0x88, 0x09, 0x7A, 0x48, 0x5D, 0x7F, 0x93, 0xA8, 0xB2, 0x29, 0xD3
+            };
+            version_of_font.Add(new Version_of_font(i2, "Wolf Among Us PS4"));
+
             byte[] j = {
                            0xE1, 0xD1, 0xC0, 0x2B, 0x2C, 0x29, 0xC2, 0x04, 0x23, 0xFA, 0x4B, 0xAB, 0x15, 0xA7, 0x5E, 0x33
                        };
@@ -448,7 +457,7 @@ namespace TTG_Tools
                     dataGridViewWithCoord[7, i].Value = Math.Round(BitConverter.ToSingle(ffs.coord[i].widht, 0));
                     dataGridViewWithCoord[8, i].Value = Math.Round(BitConverter.ToSingle(ffs.coord[i].height, 0));
 
-                    dataGridViewWithCoord[9, i].Value = BitConverter.ToSingle(ffs.coord[i].HZ, 0);
+                    dataGridViewWithCoord[9, i].Value = BitConverter.ToInt32(ffs.coord[i].HZ, 0);
                     dataGridViewWithCoord[10, i].Value = BitConverter.ToSingle(ffs.coord[i].kern_left_side, 0);
                     dataGridViewWithCoord[11, i].Value = BitConverter.ToSingle(ffs.coord[i].to_top, 0);
                     dataGridViewWithCoord[12, i].Value = BitConverter.ToSingle(ffs.coord[i].widht_with_kern, 0);
@@ -596,6 +605,9 @@ namespace TTG_Tools
                             if (CompareArray(header_in_file, version_of_font[q].header))
                             {
                                 version_used = q + 10;
+
+                                if (version_of_font[q].games == "Wolf Among Us PS4") version_used = q + 9;
+
                                 poz = 128;
                                 //MessageBox.Show(version_of_font[q].games); //Проверял на правильность определения.
                                 break;
@@ -1603,7 +1615,7 @@ namespace TTG_Tools
                 if (version_used >= 9)
                 {
                     dataGridViewWithCoord[1, i].Value = Methods.ConvertHexToString(ffs.coord[i].symbol, 0, 4, MainMenu.settings.ASCII_N, false);
-                    ffs.coord[i].HZ = BitConverter.GetBytes((float)Convert.ToDouble(dataGridViewWithCoord[9, i].Value.ToString()));
+                    ffs.coord[i].HZ = BitConverter.GetBytes((int)Convert.ToInt32(dataGridViewWithCoord[9, i].Value.ToString()));
                     ffs.coord[i].kern_left_side = BitConverter.GetBytes((float)Convert.ToDouble(dataGridViewWithCoord[10, i].Value.ToString()));
                     ffs.coord[i].to_top = BitConverter.GetBytes((float)Convert.ToDouble(dataGridViewWithCoord[11, i].Value.ToString()));
                     ffs.coord[i].widht_with_kern = BitConverter.GetBytes((float)Convert.ToDouble(dataGridViewWithCoord[12, i].Value.ToString()));

@@ -50,6 +50,10 @@
             this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridViewWithTextures = new System.Windows.Forms.DataGridView();
+            this.N = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Height = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Width = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Size = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStripExport_Import = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importDDSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,6 +62,18 @@
             this.importCoordinatesFromFontStudioxmlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripImportFNT = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridViewWithCoord = new System.Windows.Forms.DataGridView();
+            this.contextMenuStripExp_imp_Coord = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.exportCoordinatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.importCoordinatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.radioButtonXstart = new System.Windows.Forms.RadioButton();
+            this.radioButtonXend = new System.Windows.Forms.RadioButton();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,22 +87,6 @@
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contextMenuStripExp_imp_Coord = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.exportCoordinatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.importCoordinatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.radioButtonXstart = new System.Windows.Forms.RadioButton();
-            this.radioButtonXend = new System.Windows.Forms.RadioButton();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.N = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Height = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Width = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Size = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewWithTextures)).BeginInit();
@@ -109,21 +109,21 @@
             this.groupBox1.Controls.Add(this.checkBox2);
             this.groupBox1.Controls.Add(this.textBox9);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Location = new System.Drawing.Point(400, 33);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Location = new System.Drawing.Point(457, 33);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(321, 119);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.groupBox1.Size = new System.Drawing.Size(367, 119);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Copy coordinates";
             // 
             // buttonClear
             // 
-            this.buttonClear.Location = new System.Drawing.Point(246, 87);
-            this.buttonClear.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonClear.Location = new System.Drawing.Point(281, 87);
+            this.buttonClear.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(67, 28);
+            this.buttonClear.Size = new System.Drawing.Size(77, 28);
             this.buttonClear.TabIndex = 16;
             this.buttonClear.Text = "Clear";
             this.buttonClear.UseVisualStyleBackColor = true;
@@ -131,40 +131,40 @@
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(53, 23);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox8.Location = new System.Drawing.Point(61, 23);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(183, 22);
+            this.textBox8.Size = new System.Drawing.Size(209, 22);
             this.textBox8.TabIndex = 13;
             this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(245, 59);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(280, 59);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(26, 16);
+            this.label2.Size = new System.Drawing.Size(26, 17);
             this.label2.TabIndex = 11;
             this.label2.Text = "(0)";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(245, 28);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(280, 28);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(26, 16);
+            this.label1.Size = new System.Drawing.Size(26, 17);
             this.label1.TabIndex = 11;
             this.label1.Text = "(0)";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(11, 28);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(13, 28);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 16);
+            this.label3.Size = new System.Drawing.Size(40, 17);
             this.label3.TabIndex = 11;
             this.label3.Text = "From";
             // 
@@ -173,20 +173,20 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Location = new System.Drawing.Point(277, 27);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.checkBox1.Location = new System.Drawing.Point(317, 27);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(36, 20);
+            this.checkBox1.Size = new System.Drawing.Size(36, 21);
             this.checkBox1.TabIndex = 15;
             this.checkBox1.Text = "x";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // buttonCopyCoordinates
             // 
-            this.buttonCopyCoordinates.Location = new System.Drawing.Point(53, 87);
-            this.buttonCopyCoordinates.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonCopyCoordinates.Location = new System.Drawing.Point(61, 87);
+            this.buttonCopyCoordinates.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.buttonCopyCoordinates.Name = "buttonCopyCoordinates";
-            this.buttonCopyCoordinates.Size = new System.Drawing.Size(185, 28);
+            this.buttonCopyCoordinates.Size = new System.Drawing.Size(211, 28);
             this.buttonCopyCoordinates.TabIndex = 14;
             this.buttonCopyCoordinates.Text = "Do it!";
             this.buttonCopyCoordinates.UseVisualStyleBackColor = true;
@@ -197,30 +197,30 @@
             this.checkBox2.AutoSize = true;
             this.checkBox2.Checked = true;
             this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox2.Location = new System.Drawing.Point(277, 59);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.checkBox2.Location = new System.Drawing.Point(317, 59);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(37, 20);
+            this.checkBox2.Size = new System.Drawing.Size(37, 21);
             this.checkBox2.TabIndex = 15;
             this.checkBox2.Text = "y";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(53, 55);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox9.Location = new System.Drawing.Point(61, 55);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(183, 22);
+            this.textBox9.Size = new System.Drawing.Size(209, 22);
             this.textBox9.TabIndex = 13;
             this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(24, 60);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(27, 60);
+            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(23, 16);
+            this.label4.Size = new System.Drawing.Size(25, 17);
             this.label4.TabIndex = 11;
             this.label4.Text = "To";
             // 
@@ -231,8 +231,8 @@
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1172, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1339, 28);
             this.menuStrip1.TabIndex = 24;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -253,7 +253,7 @@
             this.openToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
             this.openToolStripMenuItem.Text = "&Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
@@ -262,7 +262,7 @@
             this.saveToolStripMenuItem.Enabled = false;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
             this.saveToolStripMenuItem.Text = "&Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
@@ -270,14 +270,14 @@
             // 
             this.saveAsToolStripMenuItem.Enabled = false;
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
             this.saveAsToolStripMenuItem.Text = "Save As ...";
             this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -300,14 +300,42 @@
             this.Width,
             this.Size});
             this.dataGridViewWithTextures.ContextMenuStrip = this.contextMenuStripExport_Import;
-            this.dataGridViewWithTextures.Location = new System.Drawing.Point(14, 33);
-            this.dataGridViewWithTextures.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridViewWithTextures.Location = new System.Drawing.Point(16, 33);
+            this.dataGridViewWithTextures.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.dataGridViewWithTextures.Name = "dataGridViewWithTextures";
             this.dataGridViewWithTextures.ReadOnly = true;
-            this.dataGridViewWithTextures.Size = new System.Drawing.Size(379, 119);
+            this.dataGridViewWithTextures.Size = new System.Drawing.Size(433, 119);
             this.dataGridViewWithTextures.TabIndex = 26;
             this.dataGridViewWithTextures.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewWithTextures_CellMouseClick);
             this.dataGridViewWithTextures.RowContextMenuStripNeeded += new System.Windows.Forms.DataGridViewRowContextMenuStripNeededEventHandler(this.dataGridViewWithTextures_RowContextMenuStripNeeded);
+            // 
+            // N
+            // 
+            this.N.HeaderText = "№";
+            this.N.Name = "N";
+            this.N.ReadOnly = true;
+            this.N.Width = 30;
+            // 
+            // Height
+            // 
+            this.Height.HeaderText = "Height";
+            this.Height.Name = "Height";
+            this.Height.ReadOnly = true;
+            this.Height.Width = 102;
+            // 
+            // Width
+            // 
+            this.Width.HeaderText = "Width";
+            this.Width.Name = "Width";
+            this.Width.ReadOnly = true;
+            this.Width.Width = 102;
+            // 
+            // Size
+            // 
+            this.Size.HeaderText = "Size";
+            this.Size.Name = "Size";
+            this.Size.ReadOnly = true;
+            this.Size.Width = 102;
             // 
             // contextMenuStripExport_Import
             // 
@@ -399,14 +427,144 @@
             this.Column11,
             this.Column12,
             this.Column13});
-            this.dataGridViewWithCoord.Location = new System.Drawing.Point(14, 160);
-            this.dataGridViewWithCoord.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridViewWithCoord.Location = new System.Drawing.Point(16, 160);
+            this.dataGridViewWithCoord.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.dataGridViewWithCoord.Name = "dataGridViewWithCoord";
-            this.dataGridViewWithCoord.Size = new System.Drawing.Size(1142, 464);
+            this.dataGridViewWithCoord.Size = new System.Drawing.Size(1305, 464);
             this.dataGridViewWithCoord.TabIndex = 27;
             this.dataGridViewWithCoord.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dataGridViewWithCoord_CellBeginEdit);
             this.dataGridViewWithCoord.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewWithCoord_CellEndEdit);
             this.dataGridViewWithCoord.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewWithCoord_CellMouseClick);
+            // 
+            // contextMenuStripExp_imp_Coord
+            // 
+            this.contextMenuStripExp_imp_Coord.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStripExp_imp_Coord.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exportCoordinatesToolStripMenuItem,
+            this.importCoordinatesToolStripMenuItem});
+            this.contextMenuStripExp_imp_Coord.Name = "contextMenuStripExp_imp_Coord";
+            this.contextMenuStripExp_imp_Coord.Size = new System.Drawing.Size(206, 52);
+            // 
+            // exportCoordinatesToolStripMenuItem
+            // 
+            this.exportCoordinatesToolStripMenuItem.Name = "exportCoordinatesToolStripMenuItem";
+            this.exportCoordinatesToolStripMenuItem.Size = new System.Drawing.Size(205, 24);
+            this.exportCoordinatesToolStripMenuItem.Text = "Export coordinates";
+            this.exportCoordinatesToolStripMenuItem.Click += new System.EventHandler(this.exportCoordinatesToolStripMenuItem_Click);
+            // 
+            // importCoordinatesToolStripMenuItem
+            // 
+            this.importCoordinatesToolStripMenuItem.Name = "importCoordinatesToolStripMenuItem";
+            this.importCoordinatesToolStripMenuItem.Size = new System.Drawing.Size(205, 24);
+            this.importCoordinatesToolStripMenuItem.Text = "Import coordinates";
+            this.importCoordinatesToolStripMenuItem.Click += new System.EventHandler(this.importCoordinatesToolStripMenuItem_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.radioButton2);
+            this.groupBox2.Controls.Add(this.radioButton1);
+            this.groupBox2.Location = new System.Drawing.Point(1065, 34);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.groupBox2.Size = new System.Drawing.Size(195, 123);
+            this.groupBox2.TabIndex = 28;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Импортировать/экспортировать:";
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(9, 73);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(126, 21);
+            this.radioButton2.TabIndex = 1;
+            this.radioButton2.Text = "без \"кернинга\"";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
+            this.radioButton1.Location = new System.Drawing.Point(9, 44);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(119, 21);
+            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "с \"кернингом\"";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.radioButtonXstart);
+            this.groupBox3.Controls.Add(this.radioButtonXend);
+            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Location = new System.Drawing.Point(833, 34);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.groupBox3.Size = new System.Drawing.Size(215, 123);
+            this.groupBox3.TabIndex = 29;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Изменить ширину на";
+            // 
+            // radioButtonXstart
+            // 
+            this.radioButtonXstart.AutoSize = true;
+            this.radioButtonXstart.Location = new System.Drawing.Point(89, 58);
+            this.radioButtonXstart.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.radioButtonXstart.Name = "radioButtonXstart";
+            this.radioButtonXstart.Size = new System.Drawing.Size(70, 21);
+            this.radioButtonXstart.TabIndex = 4;
+            this.radioButtonXstart.Text = "X start";
+            this.radioButtonXstart.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonXend
+            // 
+            this.radioButtonXend.AutoSize = true;
+            this.radioButtonXend.Checked = true;
+            this.radioButtonXend.Location = new System.Drawing.Point(9, 58);
+            this.radioButtonXend.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.radioButtonXend.Name = "radioButtonXend";
+            this.radioButtonXend.Size = new System.Drawing.Size(66, 21);
+            this.radioButtonXend.TabIndex = 3;
+            this.radioButtonXend.TabStop = true;
+            this.radioButtonXend.Text = "X end";
+            this.radioButtonXend.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(95, 27);
+            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(74, 17);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "пикселей.";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(9, 22);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(76, 22);
+            this.textBox1.TabIndex = 1;
+            this.textBox1.Text = "0";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(9, 85);
+            this.button1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(197, 28);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Change";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Column1
             // 
@@ -464,7 +622,7 @@
             // 
             // Column10
             // 
-            this.Column10.HeaderText = "HZ";
+            this.Column10.HeaderText = "Channel";
             this.Column10.Name = "Column10";
             this.Column10.Width = 119;
             // 
@@ -486,169 +644,11 @@
             this.Column13.Name = "Column13";
             this.Column13.Width = 119;
             // 
-            // contextMenuStripExp_imp_Coord
-            // 
-            this.contextMenuStripExp_imp_Coord.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStripExp_imp_Coord.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exportCoordinatesToolStripMenuItem,
-            this.importCoordinatesToolStripMenuItem});
-            this.contextMenuStripExp_imp_Coord.Name = "contextMenuStripExp_imp_Coord";
-            this.contextMenuStripExp_imp_Coord.Size = new System.Drawing.Size(206, 52);
-            // 
-            // exportCoordinatesToolStripMenuItem
-            // 
-            this.exportCoordinatesToolStripMenuItem.Name = "exportCoordinatesToolStripMenuItem";
-            this.exportCoordinatesToolStripMenuItem.Size = new System.Drawing.Size(205, 24);
-            this.exportCoordinatesToolStripMenuItem.Text = "Export coordinates";
-            this.exportCoordinatesToolStripMenuItem.Click += new System.EventHandler(this.exportCoordinatesToolStripMenuItem_Click);
-            // 
-            // importCoordinatesToolStripMenuItem
-            // 
-            this.importCoordinatesToolStripMenuItem.Name = "importCoordinatesToolStripMenuItem";
-            this.importCoordinatesToolStripMenuItem.Size = new System.Drawing.Size(205, 24);
-            this.importCoordinatesToolStripMenuItem.Text = "Import coordinates";
-            this.importCoordinatesToolStripMenuItem.Click += new System.EventHandler(this.importCoordinatesToolStripMenuItem_Click);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.radioButton2);
-            this.groupBox2.Controls.Add(this.radioButton1);
-            this.groupBox2.Location = new System.Drawing.Point(932, 34);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(171, 123);
-            this.groupBox2.TabIndex = 28;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Импортировать/экспортировать:";
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(8, 73);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(4);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(124, 20);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.Text = "без \"кернинга\"";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(8, 44);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(4);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(119, 20);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "с \"кернингом\"";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.radioButtonXstart);
-            this.groupBox3.Controls.Add(this.radioButtonXend);
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.textBox1);
-            this.groupBox3.Controls.Add(this.button1);
-            this.groupBox3.Location = new System.Drawing.Point(729, 34);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(188, 123);
-            this.groupBox3.TabIndex = 29;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Изменить ширину на";
-            // 
-            // radioButtonXstart
-            // 
-            this.radioButtonXstart.AutoSize = true;
-            this.radioButtonXstart.Location = new System.Drawing.Point(78, 58);
-            this.radioButtonXstart.Margin = new System.Windows.Forms.Padding(4);
-            this.radioButtonXstart.Name = "radioButtonXstart";
-            this.radioButtonXstart.Size = new System.Drawing.Size(69, 20);
-            this.radioButtonXstart.TabIndex = 4;
-            this.radioButtonXstart.Text = "X start";
-            this.radioButtonXstart.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonXend
-            // 
-            this.radioButtonXend.AutoSize = true;
-            this.radioButtonXend.Checked = true;
-            this.radioButtonXend.Location = new System.Drawing.Point(8, 58);
-            this.radioButtonXend.Margin = new System.Windows.Forms.Padding(4);
-            this.radioButtonXend.Name = "radioButtonXend";
-            this.radioButtonXend.Size = new System.Drawing.Size(65, 20);
-            this.radioButtonXend.TabIndex = 3;
-            this.radioButtonXend.TabStop = true;
-            this.radioButtonXend.Text = "X end";
-            this.radioButtonXend.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(83, 27);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 16);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "пикселей.";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(8, 22);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(67, 22);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "0";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(8, 85);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(172, 28);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Change";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // N
-            // 
-            this.N.HeaderText = "№";
-            this.N.Name = "N";
-            this.N.ReadOnly = true;
-            this.N.Width = 30;
-            // 
-            // Height
-            // 
-            this.Height.HeaderText = "Height";
-            this.Height.Name = "Height";
-            this.Height.ReadOnly = true;
-            this.Height.Width = 102;
-            // 
-            // Width
-            // 
-            this.Width.HeaderText = "Width";
-            this.Width.Name = "Width";
-            this.Width.ReadOnly = true;
-            this.Width.Width = 102;
-            // 
-            // Size
-            // 
-            this.Size.HeaderText = "Size";
-            this.Size.Name = "Size";
-            this.Size.ReadOnly = true;
-            this.Size.Width = 102;
-            // 
             // FontEditor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1172, 639);
+            this.ClientSize = new System.Drawing.Size(1339, 639);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.dataGridViewWithCoord);
             this.Controls.Add(this.dataGridViewWithTextures);
@@ -658,7 +658,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.MaximizeBox = false;
             this.Name = "FontEditor";
             this.Text = "Font Editor";
@@ -721,6 +721,10 @@
         private System.Windows.Forms.RadioButton radioButtonXstart;
         private System.Windows.Forms.RadioButton radioButtonXend;
         private System.Windows.Forms.ToolStripMenuItem toolStripImportFNT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn N;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Height;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Width;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Size;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -734,9 +738,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn N;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Height;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Width;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Size;
     }
 }
