@@ -382,10 +382,11 @@ namespace TTG_Tools
                 int max_h = BitConverter.ToInt32(ffs.dds[z].height_in_font, 0);
 
                 dataGridViewWithCoord[0, i].Value = i.ToString();                
-                
+
                 UnicodeEncoding unicode = new UnicodeEncoding();
                 dataGridViewWithCoord[1, i].Value = unicode.GetString(ffs.coord[i].symbol);
                 
+
                 //dataGridViewWithCoord[1, i].Value = unicode.GetString(b);
                 // ASCIIEncoding.GetEncoding(MainMenu.settings.ASCII_N).GetString(b);
                 double w_start = Math.Round(BitConverter.ToSingle(ffs.coord[i].w_start, 0) * max_w);
