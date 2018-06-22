@@ -607,7 +607,11 @@ namespace TTG_Tools
                             {
                                 version_used = q + 10;
 
-                                if (version_of_font[q].games == "Wolf Among Us PS4") version_used = q + 9;
+                                if (version_of_font[q].games == "Wolf Among Us PS4")
+                                {
+                                    version_used = q + 9;
+                                    platform = 2; //Глупый костыль для правильной работы с заголовками
+                                }
 
                                 poz = 128;
                                 //MessageBox.Show(version_of_font[q].games); //Проверял на правильность определения.
